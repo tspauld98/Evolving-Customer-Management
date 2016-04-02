@@ -15,7 +15,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
         <link rel="stylesheet" href="css/reveal.css">
-        <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+        <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
         <!-- Code syntax highlighting -->
         <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,7 +41,7 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>Evolving How the Customer's Journey Is Managed</h1>
+                    <h2>Evolving How the Customer's Journey Is Managed</h2>
                     <h3>Surviving and Thriving in a Federated-Service Environment</h3>
                     <p>
                         <small>Authored by <a href="http://rx00405.info">Tim Spaulding</a> / <a href="https://twitter.com/rx00405">@rx00405</a></small>
@@ -49,332 +49,170 @@
                 </section>
 
                 <section>
-                    <h2>Hello There</h2>
-                    <p>
-                        reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
+                    <h2>Problem Context</h2>
+                    <p class="fragment shrink">
+                        Our company is saddled with a wide array of tools and utilities to manage the operations of its product platform (ex. Marketing and Care). You’ve discovered duplicate technologies across the various organizations but each group has strong justification for their existing solution.
                     </p>
-                </section>
-
-                <!-- Example of nested vertical slides -->
-                <section>
-                    <section>
-                        <h2>Vertical Slides</h2>
-                        <p>Slides can be nested inside of each other.</p>
-                        <p>Use the <em>Space</em> key to navigate through all slides.</p>
-                        <br>
-                        <a href="#" class="navigate-down">
-                            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section>
-                        <h2>Basement Level 1</h2>
-                        <p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
-                    </section>
-                    <section>
-                        <h2>Basement Level 2</h2>
-                        <p>That's it, time to go back up.</p>
-                        <br>
-                        <a href="#/2">
-                            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-                        </a>
-                    </section>
-                </section>
-
-                <section>
-                    <h2>Slides</h2>
-                    <p>
-                        Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
+                    <p class="fragment shrink">
+                        The users experience multiple pain-points due to the sheer number of tools they need to work with, redundancy and inefficiencies in the processes they work with and the duplication of the data entry.
+                    </p>
+                    <p class="fragment">
+                        <b><i>How do we improve how we manage our customer's journey with our product line?</i></b>
                     </p>
                 </section>
 
                 <section>
-                    <h2>Point of View</h2>
-                    <p>
-                        Press <strong>ESC</strong> to enter the slide overview.
-                    </p>
-                    <p>
-                        Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-                    </p>
-                </section>
-
-                <section>
-                    <h2>Touch Optimized</h2>
-                    <p>
-                        Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-                    </p>
-                </section>
-
-                <section data-markdown>
-                    <script type="text/template">
-                        ## Markdown support
-
-                        Write content using inline or external Markdown.
-                        Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-                        ```
-                        <section data-markdown>
-                          ## Markdown support
-
-                          Write content using inline or external Markdown.
-                          Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-                        </section>
-                        ```
-                    </script>
-                </section>
-
-                <section>
-                    <section id="fragments">
-                        <h2>Fragments</h2>
-                        <p>Hit the next arrow...</p>
-                        <p class="fragment">... to step through ...</p>
-                        <p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-                        <aside class="notes">
-                            This slide has fragments which are also stepped through in the notes window.
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Fragment Styles</h2>
-                        <p>There's different types of fragments, like:</p>
-                        <p class="fragment grow">grow</p>
-                        <p class="fragment shrink">shrink</p>
-                        <p class="fragment fade-out">fade-out</p>
-                        <p class="fragment current-visible">current-visible</p>
-                        <p class="fragment highlight-red">highlight-red</p>
-                        <p class="fragment highlight-blue">highlight-blue</p>
-                    </section>
-                </section>
-
-                <section id="transitions">
-                    <h2>Transition Styles</h2>
-                    <p>
-                        You can select from different transitions, like: <br>
-                        <a href="?transition=none#/transitions">None</a> -
-                        <a href="?transition=fade#/transitions">Fade</a> -
-                        <a href="?transition=slide#/transitions">Slide</a> -
-                        <a href="?transition=convex#/transitions">Convex</a> -
-                        <a href="?transition=concave#/transitions">Concave</a> -
-                        <a href="?transition=zoom#/transitions">Zoom</a>
-                    </p>
-                </section>
-
-                <section id="themes">
-                    <h2>Themes</h2>
-                    <p>
-                        reveal.js comes with a few themes built in: <br>
-                        <!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-                        <a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-                    </p>
-                </section>
-
-                <section>
-                    <section data-background="#dddddd">
-                        <h2>Slide Backgrounds</h2>
-                        <p>
-                            Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-                        </p>
-                        <a href="#" class="navigate-down">
-                            <img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-                        </a>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-                        <h2>Image Backgrounds</h2>
-                        <pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-                    </section>
-                    <section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-                        <h2>Tiled Backgrounds</h2>
-                        <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-                    </section>
-                    <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-                        <div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-                            <h2>Video Backgrounds</h2>
-                            <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-                        </div>
-                    </section>
-                    <section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-                        <h2>... and GIFs!</h2>
-                    </section>
-                </section>
-
-                <section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-                    <h2>Background Transitions</h2>
-                    <p>
-                        Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-                    </p>
-                    <pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-                </section>
-
-                <section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-                    <h2>Background Transitions</h2>
-                    <p>
-                        You can override background transitions per-slide.
-                    </p>
-                    <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-                </section>
-
-                <section>
-                    <h2>Pretty Code</h2>
-                    <pre><code class="hljs" data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-                    </code></pre>
-                    <p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-                </section>
-
-                <section>
-                    <h2>Marvelous List</h2>
+                    <h2>Perspective</h2>
                     <ul>
-                        <li>No order here</li>
-                        <li>Or here</li>
-                        <li>Or here</li>
-                        <li>Or here</li>
+                        <li class="fragment shrink">
+                            Systems such as online marketing services and customer support services are all focused on managing the customer’s journey with a product line
+                        </li>
+                        <li class="fragment shrink">
+                            All these services are context to the product line and therefore make investing in large, complicated engineering effort to build a custom solution a hard sell.
+                        </li>
+                        <li class="fragment shrink">
+                            A federation of services is a great approach that offers best-of-breed technology to product teams
+                        </li>
                     </ul>
-                </section>
-
-                <section>
-                    <h2>Fantastic Ordered List</h2>
-                    <ol>
-                        <li>One is smaller than...</li>
-                        <li>Two is smaller than...</li>
-                        <li>Three!</li>
-                    </ol>
-                </section>
-
-                <section>
-                    <h2>Tabular Tables</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Item</th>
-                                <th>Value</th>
-                                <th>Quantity</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Apples</td>
-                                <td>$1</td>
-                                <td>7</td>
-                            </tr>
-                            <tr>
-                                <td>Lemonade</td>
-                                <td>$2</td>
-                                <td>18</td>
-                            </tr>
-                            <tr>
-                                <td>Bread</td>
-                                <td>$3</td>
-                                <td>2</td>
-                            </tr>
-                        </tbody>
+                    <table class="fragment" style=" background-color: #FFDD9C; border: 2px solid #FFC000;">
+                        <tr>
+                            <td align="center">
+                                <span style="color: black;"><b><i>Integration is the key for making a federated service model work as well as a custom-designed support system</i></b></span>
+                            </td>
+                        </tr>
                     </table>
                 </section>
 
                 <section>
-                    <h2>Clever Quotes</h2>
-                    <p>
-                        These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-                    </p>
-                    <blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-                        &ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-                        reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-                    </blockquote>
+                    <h2>Objective</h2>
+                    <h4 style="text-align: left;"><b><i>Move our company's product line from...</i></b></h4>
+                    <p style="text-align: left; margin-left: 50px;"><span class="fragment">Point-in-time, issue-specific customer journey management</span></p>
+                    <h4 style="text-align: left;"><b><i>To...</i></b></h4>
+                    <p style="text-align: left; margin-left: 50px;"><span class="fragment">Seamless, continuous, and transparent management of the customer’s journey spanning their entire engagement with our product</span></p>
                 </section>
 
                 <section>
-                    <h2>Intergalactic Interconnections</h2>
-                    <p>
-                        You can link between slides internally,
-                        <a href="#/2/3">like this</a>.
-                    </p>
+                    <h2>Evolution Approach in Phases</h2>
+                    <table>
+                        <tr class="fragment zoom-in">
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; width: 170px;"><img src="./assets/img/inventory_chevron.png" style="border: 0px;"></td>
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; font-size: 20px">Catalog what is used, for what purpose, and by which team</td>
+                        </tr>
+                        <tr class="fragment zoom-in">
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; width: 170px;"><img src="./assets/img/scoring_chevron.png" style="border: 0px;"></td>
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; font-size: 20px">Assign business and technical metrics to each service/system based on a common criteria</td>
+                        </tr>
+                        <tr class="fragment zoom-in">
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; font-size: 20px">Using the inventory and the related scorecards, develop a skeletal data framework that relates the customer data in the federated services</td>
+                        </tr>
+                        <tr class="fragment zoom-in">
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; width: 170px;"><img src="./assets/img/integration_chevron.png" style="border: 0px;"></td>
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; font-size: 20px">Prioritizing by scorecards, capture customer data from federated services and broadcast events from one service to other services</td>
+                        </tr>
+                        <tr class="fragment zoom-in">
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; width: 170px;"><img src="./assets/img/exploration_chevron.png" style="border: 0px;"></td>
+                            <td style="border-bottom: 0px; padding: 0em 0em 0em 0em; vertical-align: middle; font-size: 20px">Envision and integrate new services that reveal new opportunities to the customer and to our company</td>
+                        </tr>
+                    </table>
                 </section>
 
                 <section>
-                    <h2>Speaker View</h2>
-                    <p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-                    <p>Press the <em>S</em> key to try it out.</p>
-
-                    <aside class="notes">
-                        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-                    </aside>
+                    <section data-transition="slide-in slide-out">
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Inventory Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/inventory_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <span style="font-size: xx-large;">
+                                <li>“Follow Me Home” visits with key teams that operate the product line</li>
+                                <li>
+                                    For every interaction with a system/service on behalf of a customer, record the following data:
+                                    <ul>
+                                        <span style="font-size: x-large;">
+                                            <li>System/Service Name</li>
+                                            <li>Business Leader</li>
+                                            <li>Technical Leader</li>
+                                            <li>Business Function (List of functions in support of product line)</li>
+                                            <li>Business Impact (Critical, Supportive, or Redundant)</li>
+                                            <li>Customer Impact (All Customers, Most Customers, Some Customers, or Few Customers)</li>
+                                            <li>Approx. Number of Customers Impacted Annually</li>
+                                            <li>Implementation Profile (Licensed Service, Licensed System, Custom System)</li>
+                                            <li>Integration Profile (Fully-Accessible, Partially-Accessible, or Inaccessible)</li>
+                                            <li>Product Dependency (Tightly-Coupled, Loosely-Coupled, Uncoupled)</li>
+                                        </span>
+                                    </ul>
+                                </li>
+                            </span>
+                        </ul>
+                    </section>
+                    <section data-transition="slide-in slide-out"> 
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Scoring Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/scoring_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section data-transition="slide-in slide-out"> 
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Rationalization Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section data-transition="slide-in slide-out"> 
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Integration Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/integration_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section data-transition="slide-in slide-out">
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Exploration Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/exploration_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                    </section>
                 </section>
 
                 <section>
-                    <h2>Export to PDF</h2>
-                    <p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, here's an example:</p>
-                    <iframe src="https://www.slideshare.net/slideshow/embed_code/42840540" width="445" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-                </section>
-
-                <section>
-                    <h2>Global State</h2>
-                    <p>
-                        Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-                        will be added as a class to the document element when the slide is open. This lets you
-                        apply broader style changes, like switching the page background.
-                    </p>
-                </section>
-
-                <section data-state="customevent">
-                    <h2>State Events</h2>
-                    <p>
-                        Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-                    </p>
-                    <pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-    console.log( '"customevent" has fired' );
-} );
-                    </code></pre>
-                </section>
-
-                <section>
-                    <h2>Take a Moment</h2>
-                    <p>
-                        Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-                    </p>
-                </section>
-
-                <section>
-                    <h2>Much more</h2>
+                    <h2>Concerns on Approach</h2>
                     <ul>
-                        <li>Right-to-left support</li>
-                        <li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-                        <li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-                        <li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-                        <li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
+                        <li>Stakeholders don’t/won’t buy-in</li>
+                        <li>Critical customer data is stranded in external service</li>
+                        <li>Missing services/systems from the inventory</li>
+                        <li>Lack of identity keys in data prevents rationalization of customer data</li>
+                        <li>Performance and load during season of integrations</li>
                     </ul>
                 </section>
 
-                <section style="text-align: left;">
-                    <h1>THE END</h1>
-                    <p>
-                        - <a href="http://slides.com">Try the online editor</a> <br>
-                        - <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-                    </p>
+                <section>
+                    <h2>Avoiding Religion</h2>
+                    <ul>
+                        <li>
+                            Stepping down the ladder of inference
+                                <span style="font-size: x-large;"><ul><li>Finding where the common ground exists is key to resolving a path forward</li></ul></span>
+                        </li>
+                        <li>
+                            Lean on data-centric analysis
+                                <span style="font-size: x-large;"><ul><li>Scorecards are essential to boil down radical conflict</li></ul></span>
+                        </li>
+                        <li>
+                            Find the “spirituality” behind the “religion”
+                            <span style="font-size: x-large;"><ul>
+                                <li>Reason for radical arguments is usually a sense of greater purpose</li>
+                                <li>Finding the sense of greater purpose and articulating it as requirements is key to resolving radical conflicts about tool A versus tool B</li>
+                            </ul></span>
+                        </li>
+                    </ul>
                 </section>
-
             </div>
 
         </div>
@@ -393,12 +231,12 @@ Reveal.addEventListener( 'customevent', function() {
                 center: true,
 
                 // Parallax background image
-                parallaxBackgroundImage: './assets/img/technology_glider.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+                parallaxBackgroundImage: './assets/img/technology_orig_trans33.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
                 // Parallax background size
                 parallaxBackgroundSize: '1600px 1065px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
 
-                transition: 'zoom', // none/fade/slide/convex/concave/zoom
+                transition: 'convex', // none/fade/slide/convex/concave/zoom
 
                 // Optional reveal.js plugins
                 dependencies: [
