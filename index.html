@@ -220,12 +220,72 @@
                 </section>
 
                 <section> 
-                    <table>
-                        <tr>
-                            <td style=" vertical-align: middle;"><h3>Rationalization Process</h3></td>
-                            <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
-                        </tr>
-                    </table>
+                    <section>
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Rationalization Process</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>Based on the Business Function content in the Inventory, formulate a basic state chart of the Customer's Journey with the product line</li>
+                            <li>Determine required meta-content data required for state transition events</li>
+                            <li>Determine how cross-service identity will be determined and managed</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Example Customer Journey</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                        <img src="./assets/img/examplecustomerjourney.png" style="border: 0px;">
+                    </section>
+                    <section>
+                        <table>
+                            <tr>
+                                <td style=" vertical-align: middle;"><h3>Example Rationalized Data Structure</h3></td>
+                                <td style=" vertical-align: middle; width: 170px;"><img src="./assets/img/rationalization_chevron.png" style="border: 0px;"></td>
+                            </tr>
+                        </table>
+                        <pre style="white-space: pre-wrap;"><code class="hljs" data-trim contenteditable>
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Customer",
+    "description": "A customer object defines the rationalized structure that maps events and data points from across the product line and it's support systems into a single structure.",
+    "type": "object",
+    "properties": {
+        "_id": {
+            "description": "The unique identifier for this customer object.",
+            "type": "object",
+            "default": {}
+        },
+        "platformHeader": {
+            "description": "The object where platform-specific meta-data is kept such as schema and API version information.",
+            "type": "object",
+            "default": {}
+        },
+        "identity": {
+            "description": "The object where the customer's identity keys are kept so that this object can be mapped to any internal or external support systems.",
+            "type": "object",
+            "default": {}
+        },
+        "profile": {
+            "description": "The object where the customer's profile information is kept for convenience and cross-reference with external and internal systems.",
+            "type": "object",
+            "default": {}
+        },
+        "events": {
+            "description": "The array of objects where various events from the customer's journey with the product are recorded.  Many of these records would have different structures given that the various events would have originated from distinct systems.",
+            "type": "array",
+            "default": []
+        }
+    },
+    "required": [ "_id", "platformHeader", "identity", "events" ]
+}
+                        </code></pre>
+                    </section>
                 </section>
 
                 <section> 
